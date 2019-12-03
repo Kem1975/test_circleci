@@ -12,8 +12,8 @@ jobs:
                 steps:
                         - checkout
                         - run:
-                          name: Install System Dependencies
-                          command: sudo apt-get update && sudo apt-get install -y postgres-client-9.6
+                                  name: Install System Dependencies
+                                  command: sudo apt-get update && sudo apt-get install -y postgres-client-9.6
                         - run: whoami                          
                         - run: ls ~/tmp                       
                         - run: |
