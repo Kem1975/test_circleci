@@ -1,0 +1,11 @@
+version: 2
+jobs:
+        build:
+                working_directory: ~/tmp
+                docker:
+                        - image: postgres:10
+                          environment:
+                                  POSTGRES_USER: postgres
+                                  POSTGRES_DB: ca_st
+                steps:
+                        - checkout
