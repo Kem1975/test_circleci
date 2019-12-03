@@ -3,6 +3,7 @@ jobs:
         build:
                 working_directory: ~/tmp
                 docker:
+                        - image: python:3.7.3
                         - image: postgres:10
                           environment:
                                   POSTGRES_USER: postgres
