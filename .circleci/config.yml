@@ -31,7 +31,8 @@ jobs:
                                 -d ca_st \
                                 -a \
                                 -f ~/tmp/create_schema.sql \
-                                --echo-all
+                                --echo-all \
+                                ON_ERROR_STOP=on
                                 
                         - run: |
                                 psql \
@@ -42,5 +43,6 @@ jobs:
                                 -d ca_st \
                                 -a \
                                 -f ~/tmp/create_table.sql \
-                                --echo-all
+                                --echo-all \
+                                ON_ERROR_STOP=on
                                 
