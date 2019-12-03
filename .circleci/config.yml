@@ -44,14 +44,14 @@ jobs:
                                 -f ~/tmp/create_table.sql \
                                 --echo-all
                          
-                         - run: |
-                                psql \
-                                -X \
-                                -h localhost \
-                                -p 5432 \
-                                -U postgres \
-                                -d ca_st \
-                                -a \
-                                -f ~/tmp/query_table.sql \
-                                --echo-all
+                        - run: |
+                               psql \
+                               -X \
+                               -h localhost \
+                               -p 5432 \
+                               -U postgres \
+                               -d ca_st \
+                               -a \
+                               -f ~/tmp/query_table.sql \
+                               --echo-all
                                 
