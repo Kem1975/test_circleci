@@ -9,3 +9,4 @@ jobs:
                                   POSTGRES_DB: ca_st
                 steps:
                         - checkout
+                        - run: whoami                          
