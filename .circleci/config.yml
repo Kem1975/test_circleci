@@ -11,11 +11,11 @@ jobs:
                                   POSTGRES_DB: ca_st
                 steps:
                         - checkout
+                        - run: whoami                          
+                        - run: ls ~/tmp                       
                         - run:
                                   name: Install System Dependencies
                                   command: sudo apt-get update && sudo apt-get install -y postgres-client-9.6
-                        - run: whoami                          
-                        - run: ls ~/tmp                       
                         - run: |
                                 psql \
                                 -h localhost
