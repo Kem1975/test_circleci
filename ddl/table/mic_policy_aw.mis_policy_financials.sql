@@ -1,0 +1,41 @@
+CREATE TABLE IF NOT EXISTS mic_policy_aw.mis_policy_financials (
+	mpf_id numeric(22,0),
+	mpf_policy_reference varchar(30),
+	mpf_state_code varchar(3),
+	mpf_bill_type varchar(1),
+	mpf_valid_pay_option_id numeric(22,0),
+	mpf_collection_method_id numeric(22,0),
+	mpf_changed_premium numeric(22,0),
+	mpf_changed_comm_premium numeric(22,0),
+	mpf_full_term_premium numeric(22,0),
+	mpf_account_number numeric(22,0),
+	mpf_payor_type varchar(1),
+	mpf_payor_id varchar(20),
+	mpf_payor_name varchar(60),
+	mpf_payor_address_1 varchar(100),
+	mpf_payor_address_2 varchar(100),
+	mpf_payor_city varchar(35),
+	mpf_payor_state varchar(3),
+	mpf_payor_zip varchar(9),
+	mpf_payor_phone varchar(25),
+	mpf_comm_plan_id numeric(22,0),
+	mpf_comm_percentage numeric(22,0),
+	mpf_comm_amount numeric(22,0),
+	mpf_deposit_amount numeric(22,0),
+	mpf_deposit_percentage numeric(22,0),
+	mpf_billing_effective_date date,
+	mpf_date_created date,
+	mpf_user_created varchar(128),
+	mpf_date_modified date,
+	mpf_user_modified varchar(128),
+	mpf_collector_method_code varchar(2),
+	mpf_payor_name_2 varchar(60),
+	mpf_payor_zip_ext varchar(9),
+	mpf_eft_token varchar(60),
+	mpf_interface_account_number varchar(50),
+	mpf_eft_draft_option varchar(50)
+);
+
+ALTER TABLE mic_policy_aw.mis_policy_financials DROP CONSTRAINT IF EXISTS mis_policy_financials_mpf_id;
+ALTER TABLE mic_policy_aw.mis_policy_financials ADD CONSTRAINT mis_policy_financials_mpf_id PRIMARY KEY (mpf_id);
+

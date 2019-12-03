@@ -1,5 +1,5 @@
-CREATE TABLE IF NOT EXISTS mic_policy_aw.rt_mis_quote_policies (
-	gid BADNUMBERTYPE(22,0),
+CREATE TABLE IF NOT EXISTS mic_policy_aw.vw_mis_quote_policies (
+	gid numeric(22,0),
 	entity_type varchar(64),
 	add_entity_type varchar(64),
 	mod_entity_type varchar(64),
@@ -298,6 +298,6 @@ CREATE TABLE IF NOT EXISTS mic_policy_aw.rt_mis_quote_policies (
 	address_ver_eco_chk varchar(1)
 );
 
-ALTER TABLE mic_policy_aw.rt_mis_quote_policies DROP CONSTRAINT IF EXISTS rt_mis_quote_policies_gid;
-ALTER TABLE mic_policy_aw.rt_mis_quote_policies ADD CONSTRAINT rt_mis_quote_policies_gid PRIMARY KEY (gid);
+ALTER TABLE mic_policy_aw.vw_mis_quote_policies DROP CONSTRAINT IF EXISTS vw_mis_quote_policies_gid;
+ALTER TABLE mic_policy_aw.vw_mis_quote_policies ADD CONSTRAINT vw_mis_quote_policies_gid PRIMARY KEY (gid);
 

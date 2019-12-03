@@ -27,7 +27,7 @@ jobs:
                                 -X \
                                 -h localhost \
                                 -p 5432 \
-                                -U postgres \
+                                -U $PGUSER \
                                 -d ca_st \
                                 -a \
                                 -f ~/tmp/create_schema.sql \
@@ -39,7 +39,7 @@ jobs:
                                 -X \
                                 -h localhost \
                                 -p 5432 \
-                                -U postgres \
+                                -U $PGUSER \
                                 -d ca_st \
                                 -a \
                                 -f ~/tmp/create_table.sql \

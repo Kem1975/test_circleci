@@ -1,0 +1,42 @@
+CREATE TABLE IF NOT EXISTS mic_policy_aw.mis_contacts (
+	mcn_gid numeric(22,0),
+	mcn_insured_contact numeric(22,0),
+	mcn_producer_contact numeric(22,0),
+	mcn_entity_type varchar(64),
+	mcn_add_entity_type varchar(64),
+	mcn_mod_entity_type varchar(64),
+	mcn_del_entity_type varchar(64),
+	mcn_entity_reference varchar(64),
+	mcn_fk_column_name varchar(64),
+	mcn_fk_column_value numeric(22,0),
+	mcn_add_entity_reference varchar(64),
+	mcn_mod_entity_reference varchar(64),
+	mcn_del_entity_reference varchar(64),
+	mcn_entity_status varchar(32),
+	mcn_entity_is_locked char(1),
+	mcn_id numeric(22,0),
+	mcn_date_created date,
+	mcn_user_created varchar(128),
+	mcn_date_modified date,
+	mcn_user_modified varchar(128),
+	mcn_date_deleted date,
+	mcn_audit_flag varchar(1),
+	mcn_contact_name varchar(250),
+	mcn_e_mail varchar(256),
+	mcn_title varchar(128),
+	mcn_phone_1 varchar(16),
+	mcn_phone_2 varchar(16),
+	mcn_fax varchar(16),
+	mcn_web_site varchar(256),
+	mcn_master_record_gid numeric(22,0),
+	mcn_loss_payee_contact numeric(22,0),
+	mcn_broker_producer numeric(22,0),
+	mcn_c_surplus_contact numeric(22,0),
+	mcn_customer_contact numeric(22,0),
+	mcn_primary_customer_contact varchar(1),
+	mcn_customer_contact_info varchar(1)
+);
+
+ALTER TABLE mic_policy_aw.mis_contacts DROP CONSTRAINT IF EXISTS mis_contacts_mcn_gid;
+ALTER TABLE mic_policy_aw.mis_contacts ADD CONSTRAINT mis_contacts_mcn_gid PRIMARY KEY (mcn_gid);
+

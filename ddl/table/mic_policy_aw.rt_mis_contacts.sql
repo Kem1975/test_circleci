@@ -1,0 +1,42 @@
+CREATE TABLE IF NOT EXISTS mic_policy_aw.rt_mis_contacts (
+	gid numeric(22,0),
+	entity_type varchar(64),
+	add_entity_type varchar(64),
+	mod_entity_type varchar(64),
+	del_entity_type varchar(64),
+	entity_reference varchar(64),
+	fk_column_name varchar(64),
+	fk_column_value numeric(22,0),
+	add_entity_reference varchar(64),
+	mod_entity_reference varchar(64),
+	del_entity_reference varchar(64),
+	entity_status varchar(32),
+	entity_is_locked char(1),
+	id numeric(22,0),
+	date_created date,
+	user_created varchar(128),
+	date_modified date,
+	user_modified varchar(128),
+	date_deleted date,
+	audit_flag varchar(1),
+	contact_name varchar(250),
+	e_mail varchar(256),
+	title varchar(128),
+	phone_1 varchar(16),
+	phone_2 varchar(16),
+	fax varchar(16),
+	web_site varchar(256),
+	producer_contact numeric(22,0),
+	insured_contact numeric(22,0),
+	loss_payee_contact numeric(22,0),
+	broker_producer numeric(22,0),
+	master_record_gid numeric(22,0),
+	c_surplus_contact numeric(22,0),
+	customer_contact numeric(22,0),
+	primary_customer_contact varchar(1),
+	customer_contact_info varchar(1)
+);
+
+ALTER TABLE mic_policy_aw.rt_mis_contacts DROP CONSTRAINT IF EXISTS rt_mis_contacts_gid;
+ALTER TABLE mic_policy_aw.rt_mis_contacts ADD CONSTRAINT rt_mis_contacts_gid PRIMARY KEY (gid);
+
