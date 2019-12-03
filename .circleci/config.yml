@@ -19,7 +19,8 @@ jobs:
                 steps:
                         - checkout
                         - run: whoami                          
-                        - run: ls ~/tmp                        
+                        - run: ls ~/tmp                       
+                        - run: sudo apt install postgresql-client
                         - run: |
                                 psql \
                                 -h localhost
