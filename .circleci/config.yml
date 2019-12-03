@@ -21,10 +21,7 @@ jobs:
                         - run: whoami                          
                         - run: ls ~/tmp                                            
                         - run: cat ~/tmp/create_schema.sql
-                        #- run: |
-                        #    psql \
-                        #    -d $TEST_DATABASE_URL \
-                        #    -c "CREATE SCHEMA IF NOT EXISTS mic_policy_aw;"
+                        
                         - run: |
                                 psql \
                                 -X \
@@ -45,5 +42,16 @@ jobs:
                                 -d ca_st \
                                 -a \
                                 -f ~/tmp/create_table.sql \
+                                --echo-all
+                         
+                         - run: |
+                                psql \
+                                -X \
+                                -h localhost \
+                                -p 5432 \
+                                -U postgres \
+                                -d ca_st \
+                                -a \
+                                -f ~/tmp/query_table.sql \
                                 --echo-all
                                 
