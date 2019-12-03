@@ -20,7 +20,7 @@ jobs:
                         - checkout
                         - run: whoami                          
                         - run: ls ~/tmp                       
-                        - run: apt install postgresql-client
+                        - run: apt-get install postgresql-client-9.6
                         - run: |
                                 psql \
                                 -h localhost
