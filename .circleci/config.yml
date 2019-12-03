@@ -3,19 +3,18 @@ jobs:
         build:
                 working_directory: ~/tmp
                 
-                # docker:
-                #         - image: python:3.7.3
-                #         - image: postgres:10
-                #           environment:
-                #                   POSTGRES_USER: postgres
-                #                   POSTGRES_DB: ca_st
-                
                 docker:
-                        - image: circleci/python:3.7.3
+                        - image: python:3.7.3
+                        - image: postgres:10
                           environment:
-                                TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
-
-                        - image: circleci/postgres:alpine
+                                  POSTGRES_USER: postgres
+                                  POSTGRES_DB: ca_st
+                
+               # docker:
+               #         - image: circleci/python:3.7.3
+               #           environment:
+               #                 TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
+               #         - image: circleci/postgres:alpine
 
                 steps:
                         - checkout
