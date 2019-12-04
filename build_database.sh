@@ -8,7 +8,13 @@ echo $POSTGRES_USER
 echo $POSTGRES_HOST
 echo $POSTGRES_DB
 
-pattern_array=( "~/tmp/ddl/schema/\w*.sql" "~/tmp/ddl/table/\w*.\w*.sql" )
+pattern_array=( "./ddl/schema/\w*.sql" "./ddl/table/\w*.\w*.sql" )
+
+for PATTERN in "${pattern_array[@]}"
+do
+	find . | grep $PATTERN
+done
+exit 0
 
 for PATTERN in "${pattern_array[@]}"
 do
