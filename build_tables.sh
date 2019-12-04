@@ -1,17 +1,9 @@
 #!/bin/bash
-for FILE in $(find . | grep 'ddl/table/*.*.sql')
+for FILE in $(find . | grep '~/tmp/ddl/table/*.*.sql')
 do
 	echo "Processing $f"
 	
-	psql \
-	  -X \
-	  -U postgres \
-	  -h localhost \
-	  -f $FILE \
-	  --echo-all \
-	  --set AUTOCOMMIT=off \
-	  --set ON_ERROR_STOP=on \	  
-	   ca_st
+	psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f $FILE
 
 	   psql_exit_status = $?
 
