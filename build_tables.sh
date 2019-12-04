@@ -11,9 +11,6 @@ do
 	PSQL_EXIT_STATUS=$?	  
 	
 	echo $PSQL_EXIT_STATUS
-
-	PSQL_EXIT_STATUS=99
-	echo $PSQL_EXIT_STATUS
 	
 	if [ $PSQL_EXIT_STATUS != 0 ]; then
 		echo "psql failed while trying to run this sql script" 1>&2
