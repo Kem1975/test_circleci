@@ -22,10 +22,9 @@ jobs:
                             name: Install postgresql-client-9.6 
                             command: |
                                 sudo apt-get update
-                                sudo apt install postgresql-client-9.6            
-                        - run: 
-                            name: Make database build script executable
-                            command: chmod a+x ~/tmp/build_database.sh
+                                sudo apt install postgresql-client-9.6                                   
                         - run: 
                             name: Run the database build script
-                            command: ./build_database.sh $POSTGRES_USER $POSTGRES_HOST $POSTGRES_DB
+                            command: |
+                                chmod a+x ~/tmp/build_database.sh
+                                ./build_database.sh $POSTGRES_USER $POSTGRES_HOST $POSTGRES_DB
