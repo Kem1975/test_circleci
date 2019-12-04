@@ -1,7 +1,11 @@
 #!/bin/bash
 
 echo "Process files"
+
+find . | grep '~/tmp/ddl/table/*.*.sql'
+
 exit 99
+
 
 #find . | grep '~/tmp/ddl/table/*.*.sql' > files.txt
 #
