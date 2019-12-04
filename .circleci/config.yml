@@ -8,6 +8,7 @@ jobs:
                       environment:
                         POSTGRES_HOST: 127.0.0.1
                         POSTGRES_USER: postgres
+                        POSTGRES_DB: ca_st
                         RAILS_ENV: test
                     - image: circleci/postgres:9.6-alpine
                       environment:
