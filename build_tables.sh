@@ -8,11 +8,11 @@ do
 	
 	psql -X -h localhost -p 5432 -U postgres -d ca_st -f $FILE
 
-	PSQL_EXIT_STATUS = $?	  
+	PSQL_EXIT_STATUS=$?	  
 	
 	echo $PSQL_EXIT_STATUS
 
-	if [ $PSQL_EXIT_STATUS != 0 ]; then
+	if [$PSQL_EXIT_STATUS!=0]; then
 		echo "psql failed while trying to run this sql script" 1>&2
 		exit $PSQL_EXIT_STATUS
 	fi
@@ -30,11 +30,11 @@ do
 	
 	psql -X -h localhost -p 5432 -U postgres -d ca_st -f $FILE
 
-	PSQL_EXIT_STATUS = $?	  
+	PSQL_EXIT_STATUS=$?	  
 	
 	echo $PSQL_EXIT_STATUS
 
-	if [ $PSQL_EXIT_STATUS != 0 ]; then
+	if [$PSQL_EXIT_STATUS!=0]; then
 		echo "psql failed while trying to run this sql script" 1>&2
 		exit $PSQL_EXIT_STATUS
 	fi
