@@ -2,6 +2,8 @@
 
 echo "Process files"
 
+find .
+
 find . | grep '~/tmp/ddl/table/*.*.sql'
 
 exit 99
