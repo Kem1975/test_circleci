@@ -12,6 +12,7 @@ jobs:
                     - image: circleci/postgres:9.6-alpine
                       environment:
                         POSTGRES_USER: postgres
+                        POSTGRES_HOST: postgres
                         POSTGRES_DB: ca_st                            
                         TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
                 steps:

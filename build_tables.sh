@@ -1,95 +1,26 @@
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/schema/mic_policy_aw.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_addresses.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_ca_schedule_rating.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_ca_vehicle_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_composite_rating_group.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_comp_rating_summary.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_contacts.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_coverages_ca.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_cov_ca_aeo_liability.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_cov_ca_collision.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_cov_ca_liability.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_cov_ca_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_lob_ca.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_lookups.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_policies.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_policy_financials.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_risks.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.mis_vehicles.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_addresses.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_ca_additional_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_ca_all_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_ca_vehicle_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_comp_rating_summary.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_contacts.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_additional_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_add_int_rating.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_auto_gap_coll.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_auto_gap_otc.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_av_elect_equip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_bal_to_min_prem.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_broadened_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_busi_intrp_ratng.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_collision.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_dealer_collision.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_dlrliab_balmin.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_extended_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_ext_med_benft.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_fellow_emp.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_funeral_exp.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_ha_bal_to_min.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_leased_workers.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_liability.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_liab_bal_to_min.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_liab_cl_discount.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_liab_pd.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_limited_mexico.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_limited_pr_liab.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_loss_use_expense.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_medical_benefit.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_med_pay_auto.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_nol_oth_sc_bi.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_nol_oth_sc_pd.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_non_owned_extnd.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_obel.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_otc.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_pedestrian_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_pip.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_pollution_liab.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_prop_insur.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_rental_reim_coll.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_rental_reim_ma.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_rental_reim_otc.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_rent_reimburse.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_sup_death_ben.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_tapes_records.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_towing_and_labor.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_uim.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_um.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_um_pd.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_wage_loss.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_cov_ca_waive_coll_ded.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_c_submission.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_exp_rating_details.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_insureds.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_lob_ca.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_locations.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_lx_nyftz.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_producers.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_quote_policies.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_surcharges.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.rt_mis_vehicles.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_c_loss_prem_det.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_all_coverages.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_electro_data_liab.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_emp_benefits_liab.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_liquor_liab.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_ltd_prd_withd_exp.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_pollution_liability.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_premops_products.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_gl_sports_participants.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_lob_gl.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_policy_comms_fees.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_quote_policies.sql
-psql -X -h localhost -p 5432 -U postgres -d ca_st -a -f ~/tmp/ddl/table/mic_policy_aw.vw_mis_vehicles.sql
+#!/bin/bash
+for FILE in $(find . | grep 'ddl/table/*.*.sql')
+do
+	echo "Processing $f"
+	
+	psql \
+	  -X \
+	  -U $POSTGRES_USER \
+	  -h $POSTGRES_HOST \
+	  -f $FILE \
+	  --echo-all \
+	  --set AUTOCOMMIT=off \
+	  --set ON_ERROR_STOP=on \	  
+	   $POSTGRES_DB
+
+	   psql_exit_status = $?
+
+	   if [ $psql_exit_status != 0 ]; then
+		 echo "psql failed while trying to run this sql script" 1>&2
+		 exit $psql_exit_status
+	   fi
+
+	   echo "sql script successful"
+	exit 0
+	
+done
