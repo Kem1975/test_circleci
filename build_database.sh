@@ -1,5 +1,8 @@
 #!/bin/bash
 
+POSTGRES_USER=$1
+echo $POSTGRES_USER
+
 echo "Process schema files..."
 
 for FILE in $(find . | grep '/ddl/schema/\w*.sql')
