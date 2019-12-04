@@ -14,7 +14,7 @@ for FILE in $(find . | grep '/ddl/schema/\w*.sql')
 do
 	echo "Processing $FILE"
 	
-	psql -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
+	psql  -v ON_ERROR_STOP=1 -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
 
 	PSQL_EXIT_STATUS=$?	  
 	
@@ -35,7 +35,7 @@ for FILE in $(find . | grep '/ddl/table/\w*.\w*.sql')
 do
 	echo "Processing $FILE"
 	
-	psql -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
+	psql  -v ON_ERROR_STOP=1 -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
 
 	PSQL_EXIT_STATUS=$?	  
 	
