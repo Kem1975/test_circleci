@@ -8,11 +8,12 @@ echo $POSTGRES_USER
 echo $POSTGRES_HOST
 echo $POSTGRES_DB
 
-pattern_array=( "/ddl/schema/\w*.sql" "/ddl/table/\w*.\w*.sql" )
+pattern_array=( "~/tmp/ddl/schema/\w*.sql" "~/tmp/ddl/table/\w*.\w*.sql" )
 
 for PATTERN in "${pattern_array[@]}"
 do
 	echo $PATTERN
+	find . | grep '$PATTERN'
 	for FILE in $(find . | grep '$PATTERN')
 	do
 		echo "Processing $FILE"
