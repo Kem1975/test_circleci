@@ -34,4 +34,6 @@ jobs:
                             command: |
                                 psql \
                                 -d $TEST_DATABASE_URL
-                                -c "SELECT COUNT(*) FROM mic_policy_aw.test_bad_table;"
+                                -c "SELECT COUNT(*) FROM mic_policy_aw.test_bad_table;" \
+                                
+                                
