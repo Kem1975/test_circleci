@@ -21,6 +21,7 @@ jobs:
                         - run: 
                             name: Install postgresql-client-9.6 
                             command: sudo apt-get update
+                        - run: 
                             command: sudo apt install postgresql-client-9.6            
                         - run: 
                             command: chmod a+x ~/tmp/build_database.sh
