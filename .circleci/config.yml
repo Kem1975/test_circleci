@@ -22,5 +22,5 @@ jobs:
                         - run: whoami                          
                         - run: ls -la ~/tmp                                            
                         - run: chmod a+x ~/tmp/build_database.sh
-                        - run: ./build_tables.sh $POSTGRES_USER
+                        - run: ./build_database.sh $POSTGRES_USER
                         - run: git remote -v
