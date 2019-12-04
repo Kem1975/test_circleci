@@ -28,3 +28,12 @@ jobs:
                             command: |
                                 chmod a+x ~/tmp/build_database.sh
                                 ./build_database.sh $POSTGRES_USER $POSTGRES_HOST $POSTGRES_DB
+                        - run:
+                            name: Testing bad syntax error
+                            command: |
+                                psql -X \
+                                -h $POSTGRES_HOST \
+                                -p 5432 \
+                                -U $POSTGES_USER \
+                                -d $POSTGRES_DB \
+                                -c "CREATE TABLE IF NOT EXISTS mic_policy_aw.test_bad_table (mad_gid NUMBERIX(22,0)"
