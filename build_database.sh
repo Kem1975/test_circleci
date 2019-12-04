@@ -1,7 +1,12 @@
 #!/bin/bash
 
 POSTGRES_USER=$1
+POSTGRES_HOST=$2
+POSTGRES_DB=$3
+
 echo $POSTGRES_USER
+echo $POSTGRES_HOST
+echo $POSTGRES_DB
 
 echo "Process schema files..."
 
@@ -9,7 +14,7 @@ for FILE in $(find . | grep '/ddl/schema/\w*.sql')
 do
 	echo "Processing $FILE"
 	
-	psql -X -h localhost -p 5432 -U postgres -d ca_st -f $FILE
+	psql -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
 
 	PSQL_EXIT_STATUS=$?	  
 	
@@ -30,7 +35,7 @@ for FILE in $(find . | grep '/ddl/table/\w*.\w*.sql')
 do
 	echo "Processing $FILE"
 	
-	psql -X -h localhost -p 5432 -U postgres -d ca_st -f $FILE
+	psql -X -h $POSTGRES_HOST -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB -f $FILE
 
 	PSQL_EXIT_STATUS=$?	  
 	
