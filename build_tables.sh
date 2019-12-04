@@ -1,8 +1,8 @@
 #!/bin/bash
 
-$(find . | grep '~/tmp/ddl/table/*.*.sql')
+find . | grep '~/tmp/ddl/table/*.*.sql' > files.txt
 
-for FILE in $(find . | grep '~/tmp/ddl/table/*.*.sql')
+for FILE in $(cat files.txt)
 do
 	echo "Processing $f"
 	
