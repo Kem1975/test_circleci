@@ -10,6 +10,7 @@ jobs:
                         POSTGRES_USER: postgres
                         POSTGRES_DB: ca_st
                         RAILS_ENV: test
+                        TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
                     - image: circleci/postgres:9.6-alpine
                       environment:
                         POSTGRES_USER: postgres
