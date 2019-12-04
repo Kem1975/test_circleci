@@ -5,13 +5,13 @@ do
 	
 	psql \
 	  -X \
-	  -U $POSTGRES_USER \
-	  -h $POSTGRES_HOST \
+	  -U postgres \
+	  -h localhost \
 	  -f $FILE \
 	  --echo-all \
 	  --set AUTOCOMMIT=off \
 	  --set ON_ERROR_STOP=on \	  
-	   $POSTGRES_DB
+	   ca_st
 
 	   psql_exit_status = $?
 
