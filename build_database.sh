@@ -12,15 +12,8 @@ pattern_array=( "./ddl/schema/\w*.sql" "./ddl/table/\w*.\w*.sql" )
 
 for PATTERN in "${pattern_array[@]}"
 do
-	find . | grep $PATTERN
-done
-exit 0
-
-for PATTERN in "${pattern_array[@]}"
-do
 	echo $PATTERN
-	find . | grep '$PATTERN'
-	for FILE in $(find . | grep '$PATTERN')
+	for FILE in $(find . | grep $PATTERN)
 	do
 		echo "Processing $FILE"
 		
