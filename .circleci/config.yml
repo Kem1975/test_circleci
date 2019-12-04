@@ -22,6 +22,7 @@ jobs:
                         - run: whoami                          
                         - run: ls -la ~/tmp                                            
                         - run: chmod a+x ~/tmp/build_tables.sh
-                        - run: find . 
+                        - run: find . |/
+                            grep '.sql'
                         - run: ./build_tables.sh
                         - run: git remote -v
