@@ -10,9 +10,9 @@ echo $POSTGRES_DB
 
 pattern_array=("/ddl/schema/\w*.sql" "/ddl/table/\w*.\w*.sql")
 
-for PATTERN IN "${pattern_array[@]}"
+for PATTERN IN ${pattern_array[@]}
 do
-	for FILE IN "$(find . | grep $PATTERN)"
+	for FILE IN $(find . | grep $PATTERN)
 	do
 		echo "Processing $FILE"
 		
