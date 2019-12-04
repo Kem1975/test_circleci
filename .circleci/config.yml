@@ -7,15 +7,13 @@ jobs:
                     - image: circleci/ruby:2.3-node
                       environment:
                         POSTGRES_HOST: 127.0.0.1
+                        POSTGRES_PORT: 5432
                         POSTGRES_USER: postgres
                         POSTGRES_DB: ca_st
                         RAILS_ENV: test
                         TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
                     - image: circleci/postgres:9.6-alpine
-                      environment:
-                        POSTGRES_USER: postgres
-                        POSTGRES_HOST: 127.0.0.1
-                        POSTGRES_DB: ca_st                            
+                      environment:                           
                         TEST_DATABASE_URL: postgresql://postgres@localhost/ca_st
                 steps:
                         - checkout
@@ -28,7 +26,7 @@ jobs:
                             name: Run the database build script
                             command: |
                                 chmod a+x ~/tmp/build_database.sh
-                                ./build_database.sh $POSTGRES_USER $POSTGRES_HOST $POSTGRES_DB
+                                ./build_database.sh $POSTGRES_USER $POSTGRES_HOST $POSTGRES_PORT $POSTGRES_DB
                         
                                 
                                 
