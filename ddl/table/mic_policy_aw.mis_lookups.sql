@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS mic_policy_aw.mis_lookups (
 );
 
 ALTER TABLE mic_policy_aw.mis_lookups DROP CONSTRAINT IF EXISTS mis_lookups_mil_source_element_value;
-ALTER TABLE mic_policy_aw.mis_lookups ADD CONSTRAINT mis_lookups_moa_gid PRIMARY KEY (mil_source_element_value);
+ALTER TABLE mic_policy_aw.mis_lookups ADD CONSTRAINT mis_lookups_mil_source_element_value PRIMARY KEY (mil_source_element_value);
 
