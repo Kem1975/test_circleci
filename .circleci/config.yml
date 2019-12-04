@@ -25,7 +25,7 @@ jobs:
                             name: Install postgresql-client-9.6 
                             command: |
                                 sudo apt-get update
-                                sudo apt install postgresql-client-9.6                                   
+                                sudo apt install postgresql-client-9.6
                         - run: 
                             name: Run the database build script
                             command: |
