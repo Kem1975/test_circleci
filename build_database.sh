@@ -5,6 +5,8 @@ POSTGRES_HOST=$2
 POSTGRES_PORT=$3
 POSTGRES_DB=$4
 
+echo "adding a change"
+
 echo $POSTGRES_USER
 echo $POSTGRES_HOST
 echo $POSTGRES_PORT
