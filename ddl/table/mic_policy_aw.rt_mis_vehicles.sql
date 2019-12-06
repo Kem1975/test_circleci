@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS mic_policy_aw.rt_mis_vehicles (
-	gid numerix(22,0),
+	gid numeric(22,0),
 	entity_type varchar(64),
 	add_entity_type varchar(64),
 	mod_entity_type varchar(64),
