@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS mic_policy_aw.mis_addresses (
-	mad_gid numeric(22,0),
+	mad_gid numerix(22,0),
 	mad_entity_type varchar(64),
 	mad_add_entity_type varchar(64),
 	mad_mod_entity_type varchar(64),
